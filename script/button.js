@@ -53,6 +53,8 @@ for (let i = 0; i < allBtn.length; i++) {
         </div>
         `;
 
+
+
     document.getElementById("noHistory").style.display = "none";
     document.getElementById("removedHistory").style.display = "none";
 
@@ -61,6 +63,10 @@ for (let i = 0; i < allBtn.length; i++) {
       .insertAdjacentHTML("afterbegin", history);
   });
 }
+
+
+
+
 
 function getCurrentTime() {
     const now = new Date();
@@ -112,3 +118,9 @@ const months = ["January", "February", "March", "April", "May", "June",
     document.getElementById("noHistory").style.display = "none";
     document.getElementById("history").innerHTML = "";
   });
+
+
+
+
+
+  
