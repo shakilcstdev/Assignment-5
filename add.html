@@ -61,10 +61,13 @@
               </h1>
               <hr class="border-gray-600 border-dashed" />
               <p class="text-gray-500 text-[16px]">
-                There are some way to select an element in the DOM using
-                JavaScript, you can use methods like getElementById ,
-                getElementsByClassName , getElementsByTagName , querySelector
-                and querySelectorAll .
+                জাভাস্ক্রিপ্ট ব্যবহার করে DOM থেকে কোনো এলিমেন্ট নির্বাচন করার কিছু উপায় আছে। নিম্নলিখিত মেথডগুলো ব্যবহার করতে পারেন:
+
+                getElementById – আইডি (id) অনুযায়ী একটি নির্দিষ্ট এলিমেন্ট নির্বাচন করতে।
+                getElementsByClassName – নির্দিষ্ট ক্লাস নাম (class name) অনুযায়ী একাধিক এলিমেন্ট নির্বাচন করতে।
+                getElementsByTagName – নির্দিষ্ট ট্যাগ নাম (tag name) অনুযায়ী একাধিক এলিমেন্ট নির্বাচন করতে।
+                querySelector – CSS সিলেক্টরের মাধ্যমে প্রথম পাওয়া উপযুক্ত এলিমেন্ট নির্বাচন করতে।
+                querySelectorAll – CSS সিলেক্টরের মাধ্যমে
               </p>
             </div>
             <div class="bg-white px-6 py-4 rounded-lg mt-4 flex flex-col gap-4">
@@ -74,13 +77,20 @@
               </h1>
               <hr class="border-gray-600 border-dashed" />
               <p class="text-gray-500 text-[16px]">
-                The difference between innerHTML, innerText, and textContent is
-                innerHTML retrieves the complete HTML content within an element,
-                including tags, while innerText returns only the visible text
-                content of an element , and textContent retrieves all the text
-                content within an element, including whitespace and line breaks,
-                regardless of styling or visibility, essentially giving you the
-                raw text without HTML interpretation
+                innerHTML, innerText, এবং textContent এর মধ্যে পার্থক্য হলো:
+
+innerHTML: এটি কোনো এলিমেন্টের সম্পূর্ণ HTML কন্টেন্ট নেয়, যার মধ্যে ট্যাগসহ সমস্ত HTML কোড অন্তর্ভুক্ত থাকে।
+innerText: এটি শুধুমাত্র দৃশ্যমান (ভিজিবল) টেক্সট রিটার্ন করে, অর্থাৎ যেসব টেক্সট ব্রাউজারে দেখা যায় সেগুলোই পাওয়া যাবে, কিন্তু লুকানো (hidden) টেক্সট আসবে না।
+textContent: এটি একটি এলিমেন্টের সব ধরনের টেক্সট রিটার্ন করে, যার মধ্যে হোয়াইটস্পেস এবং লাইন ব্রেকও অন্তর্ভুক্ত থাকে, তবে HTML ট্যাগগুলো এতে উপেক্ষা করা হয় (HTML ইন্টারপ্রেট হয় না)।
+সংক্ষেপে, innerHTML HTML কোডসহ পুরো কন্টেন্ট দেয়, innerText শুধু ভিজিবল টেক্সট দেয়, আর textContent এলিমেন্টের সব টেক্সট রিটার্ন করে, হোক তা দৃশ্যমান বা অদৃশ্য।
+
+
+
+
+
+
+
+
               </p>
             </div>
             <div class="bg-white px-6 py-4 rounded-lg mt-4 flex flex-col gap-4">
@@ -89,10 +99,7 @@
               </h1>
               <hr class="border-gray-600 border-dashed" />
               <p class="text-gray-500 text-[16px]">
-                Event delegation in the DOM is a JavaScript technique where you
-                attach a single event listener to a parent element, allowing it
-                to handle events triggered on its child elements, instead of
-                adding separate listeners to each child element.
+                DOM-এ Event Delegation হলো একটি JavaScript টেকনিক, যেখানে আপনি একটি অভিভাবক (parent) এলিমেন্টে একটিমাত্র event listener সংযুক্ত করেন। এটি সেই অভিভাবক এলিমেন্টের অধীনে থাকা সন্তান (child) এলিমেন্টগুলোতে সংঘটিত ইভেন্টগুলোর হ্যান্ডলিং করতে পারে। এর ফলে প্রতিটি সন্তানে আলাদা আলাদা event listener যোগ করার প্রয়োজন হয় না।
               </p>
             </div>
             <div class="bg-white px-6 py-4 rounded-lg mt-4 flex flex-col gap-4">
@@ -101,11 +108,7 @@
               </h1>
               <hr class="border-gray-600 border-dashed" />
               <p class="text-gray-500 text-[16px]">
-                Event Bubbling is the behavior where when an event occurs on an
-                element, it not only triggers an event handler on that element
-                but also propagates upwards through the DOM hierarchy,
-                triggering event handlers on its parent elements until it
-                reaches the root of the document
+                Event Bubbling হলো এমন একটি আচরণ যেখানে কোনো ইভেন্ট কোনো নির্দিষ্ট এলিমেন্টে ঘটলে, সেই এলিমেন্টের ইভেন্ট হ্যান্ডলার ট্রিগার হয় এবং একইসঙ্গে সেই ইভেন্টটি DOM (Document Object Model) এর উপরের দিকে (parent elements) ছড়িয়ে পড়ে। অর্থাৎ, ইভেন্টটি তার প্যারেন্ট এলিমেন্টগুলোর দিকেও যেতে থাকে যতক্ষণ না এটি ডকুমেন্টের মূল (root) অংশে পৌঁছে।
               </p>
             </div>
             <div class="bg-white px-6 py-4 rounded-lg my-4 flex flex-col gap-4">
@@ -115,16 +118,21 @@
               </h1>
               <hr class="border-gray-600 border-dashed" />
               <p class="text-gray-500 text-[16px]">
-                I can create new element in JS using document.createElement()
-                and then add it to the DOM with appendChild() or insertBefore().
-                To remove an element, use removeChild() or
-                parentNode.removeChild() on its parent element.
+                আমি JavaScript-এ document.createElement() ব্যবহার করে নতুন এলিমেন্ট তৈরি করতে পারি,
+এবং তারপর appendChild() বা insertBefore() দিয়ে DOM-এ যোগ করতে পারি।
+কোনো এলিমেন্ট মুছতে চাইলে removeChild() বা parentNode.removeChild() ব্যবহার করে সেটার প্যারেন্ট এলিমেন্ট থেকে সরিয়ে ফেলতে পারি।
               </p>
             </div>
           </div>
         </div>
       </section>
     </main>
-    <script src="script/changer.js"></script>
+    <script>
+      document.getElementById("backDesk")
+      .addEventListener("click", function () {
+        window.location.href = "index.html";
+      })
+    </script>
+    
   </body>
 </html>

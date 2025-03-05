@@ -78,4 +78,37 @@ function getCurrentTime() {
   
 
 }
+
+
+
+const newDate = new Date ();
+const day = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Satarday"]
+
+const months = ["January", "February", "March", "April", "May", "June",
+  "July", "August", "September", "October", "November", "December"];
+  const date = newDate.getDate();
+  const month = months[newDate.getMonth()];
+  const year = newDate.getFullYear();
+  const subDate = date + " " + month + " " + year;
+  const dayTo = day[newDate.getDay()];
+  const fixtDay = dayTo.slice(0,3);
+  document.getElementById("day-name").innerText = fixtDay + ' , ';
+  document.getElementById("date-name").innerText = subDate;
+
+
+  document.getElementById("themeChanger").addEventListener("click", function () {
+    function getRandomLightColor() {
+      const r = Math.floor(200 + Math.random() * 56);
+      const g = Math.floor(200 + Math.random() * 56);
+      const b = Math.floor(200 + Math.random() * 56);
+      return `rgb(${r}, ${g}, ${b})`;
+    }
   
+    document.body.style.backgroundColor = getRandomLightColor();
+  });
+
+  document.getElementById("clearHistory").addEventListener("click", function () {
+    document.getElementById("removedHistory").style.display = "block";
+    document.getElementById("noHistory").style.display = "none";
+    document.getElementById("history").innerHTML = "";
+  });
